@@ -1,0 +1,31 @@
+{
+  "name": "uwc_gitter-bot",
+  "version": "0.0.1",
+  "description": "Gitter Bot for UWC",
+  "author": "Prikhodko Anna <prikhodko.anna89@gmail.com>",
+  "main": "index.js",
+  "config": {
+    "room": "racc-oo-n/uwc_gitter-bot",
+    "token": "07dc1dd22949e996bb2aca176418de213de9cca3"
+  },
+  "scripts": {
+    "start": "node index.js $npm_package_config_room",
+    "coffee": "coffee -c ./index.coffee",
+    "build": "npm run coffee && npm run start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/racc-oo-n/uwc_gitter-bot"
+  },
+  "keywords": [
+    "challenge",
+    "Gitter API",
+    "node-gitter",
+    "gitter",
+    "bot"
+  ],
+  "dependencies": {
+    "coffee-script": "^1.9.1",
+    "node-gitter": "^1.2.8"
+  }
+}
