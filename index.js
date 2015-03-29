@@ -14,7 +14,7 @@
       msgCtrl = new MessagesController;
       gitter.joinRoom(config.room).then(function(room) {
         console.log('Join room:', room.name);
-        return gitter.setRoom(room).addListener().on('message', function(message) {
+        return gitter.setRoom(room).sendMessage(msgCtrl.sayHello()).addListener().on('message', function(message) {
           var txt;
           txt = message.text;
           if (msgCtrl.validate('calc', txt)) {
@@ -50,8 +50,8 @@
     validation = {
       'calc': /^calc/i,
       'disallow': /[^\d\+\-\*\/\(\)]+/,
-      'bye': /bye|leave/ig,
-      'hello': /hello|hi/ig
+      'bye': /leave/ig,
+      'hello': /hi/ig
     };
 
     replace = {

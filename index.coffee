@@ -37,8 +37,8 @@ class MessagesController
   validation =
     'calc': /^calc/i
     'disallow': /[^\d\+\-\*\/\(\)]+/
-    'bye': /bye|leave/ig
-    'hello': /hello|hi/ig
+    'bye': /leave/ig
+    'hello': /hi/ig
   replace =
     'calc': /^calc/i
     'space': /\s/g
